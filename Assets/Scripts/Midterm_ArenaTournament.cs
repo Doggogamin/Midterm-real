@@ -143,7 +143,7 @@ public class Midterm_ArenaTournament : MonoBehaviour
     /// <returns></returns>
     int RollD20()
     {
-        return Random.Range(1,20);
+        return Random.Range(1,21);
     }
 
     /// <summary>
