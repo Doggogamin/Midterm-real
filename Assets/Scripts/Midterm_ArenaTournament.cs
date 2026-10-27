@@ -248,11 +248,19 @@ public class Midterm_ArenaTournament : MonoBehaviour
 
             health[targetIndex] -= CalculateDamage(attackerIndex);
             Debug.Log(names[attackerIndex] + " hits " + names[targetIndex] + " for " + CalculateDamage(attackerIndex) + " damage.");
+            if (health[targetIndex] <= 0)
+            {
+                Debug.Log(names[targetIndex] + " is defeated");
+            }
         }
         else if (RollD20() + attackProficiency[attackerIndex] >= armorClass[targetIndex] && RollD20() == 20)
         {
             health[targetIndex] -= CalculateDamage(attackerIndex, true);
             Debug.Log(names[attackerIndex] + " lands a Critical Hit on " + names[targetIndex] + " for " + CalculateDamage(attackerIndex, true) + " damage.");
+            if (health[targetIndex] <= 0)
+            {
+                Debug.Log(names[targetIndex] + " is defeated");
+            }
         }
 
         else
