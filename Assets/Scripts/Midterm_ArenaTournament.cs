@@ -213,7 +213,6 @@ public class Midterm_ArenaTournament : MonoBehaviour
         }
         else if (CountAlive() <= 1)
         {
-            Debug.Log("One Left");
             return -1;
         }
         else
